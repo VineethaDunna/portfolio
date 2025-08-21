@@ -20,14 +20,14 @@ interface Skill {
 
 const SkillsSection: React.FC = () => {
   const skills: Skill[] = [
-    { name: "React/Next.js", icon: Code, level: 95, category: "Frontend" },
-    { name: "TypeScript", icon: Code, level: 90, category: "Language" },
+    { name: "React.js", icon: Code, level: 90, category: "Frontend" },
+    { name: "JavaScript", icon: Code, level: 88, category: "Frontend" },
     { name: "Node.js", icon: Database, level: 85, category: "Backend" },
-    { name: "UI/UX Design", icon: Palette, level: 88, category: "Design" },
-    { name: "PostgreSQL", icon: Database, level: 82, category: "Database" },
-    { name: "React Native", icon: Smartphone, level: 78, category: "Mobile" },
-    { name: "GraphQL", icon: Globe, level: 80, category: "API" },
-    { name: "AWS/Cloud", icon: Zap, level: 75, category: "DevOps" },
+    { name: "HTML/CSS", icon: Palette, level: 92, category: "Frontend" },
+    { name: "MongoDB", icon: Database, level: 80, category: "Database" },
+    { name: "Python", icon: Code, level: 85, category: "Language" },
+    { name: "Tailwind CSS", icon: Palette, level: 88, category: "Frontend" },
+    { name: "Express.js", icon: Globe, level: 82, category: "Backend" },
   ];
 
   const categories = Array.from(new Set(skills.map(skill => skill.category)));
@@ -107,11 +107,11 @@ const SkillsSection: React.FC = () => {
             {/* Tech Logo Placeholders */}
             {[
               { name: "React", color: "#61DAFB" },
-              { name: "Next.js", color: "#FFFFFF" },
-              { name: "TypeScript", color: "#3178C6" },
+              { name: "JavaScript", color: "#F7DF1E" },
               { name: "Node.js", color: "#339933" },
-              { name: "PostgreSQL", color: "#336791" },
-              { name: "AWS", color: "#FF9900" },
+              { name: "MongoDB", color: "#47A248" },
+              { name: "Python", color: "#3776AB" },
+              { name: "Tailwind", color: "#06B6D4" },
             ].map((tech, index) => (
               <motion.div
                 key={tech.name}

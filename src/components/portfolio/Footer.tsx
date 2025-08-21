@@ -6,10 +6,9 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Mail, href: "mailto:alex.johnson@email.com", label: "Email" },
+    { icon: Github, href: "https://github.com/VegirowthuManojTarun", label: "GitHub" },
+    { icon: Linkedin, href: "https://linkedin.com/in/manojtarun-vegirowthu", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:manojtarun934@gmail.com", label: "Email" },
   ];
 
   const scrollToTop = () => {
@@ -34,10 +33,10 @@ const Footer: React.FC = () => {
               onClick={scrollToTop}
               className="text-2xl lg:text-3xl font-bold text-gradient-primary hover:scale-105 transition-transform duration-300"
             >
-              Alex Johnson
+              Vegirowthu Manoj Tarun
             </button>
             <p className="mt-2 text-muted-foreground">
-              Crafting digital experiences with passion and precision
+              Building innovative solutions with code and creativity
             </p>
           </motion.div>
 
@@ -82,7 +81,7 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-6 text-sm"
           >
-            {['About', 'Projects', 'Skills', 'Contact'].map((link) => (
+            {['About', 'Projects', 'Skills', 'Experience', 'Certifications', 'Contact'].map((link) => (
               <button
                 key={link}
                 onClick={() => document.getElementById(link.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })}
@@ -112,7 +111,7 @@ const Footer: React.FC = () => {
             className="text-sm text-muted-foreground"
           >
             <p className="flex items-center justify-center gap-2">
-              © {currentYear} Alex Johnson. Made with
+              © {currentYear} Vegirowthu Manoj Tarun. Made with
               <Heart className="h-4 w-4 text-red-500 animate-pulse" />
               and lots of coffee
             </p>

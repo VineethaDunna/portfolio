@@ -57,19 +57,19 @@ const ContactSection: React.FC = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "alex.johnson@email.com",
-      href: "mailto:alex.johnson@email.com"
+      value: "manojtarun934@gmail.com",
+      href: "mailto:manojtarun934@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone", 
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 9390061135",
+      href: "tel:+919390061135"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Rajamundry, Andhra Pradesh",
       href: "#"
     }
   ];
@@ -78,20 +78,20 @@ const ContactSection: React.FC = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com",
-      username: "@alexjohnson"
+      href: "https://github.com/VegirowthuManojTarun",
+      username: "@VegirowthuManojTarun"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com",
-      username: "Alex Johnson"
+      href: "https://linkedin.com/in/manojtarun-vegirowthu",
+      username: "Vegirowthu Manoj Tarun"
     },
     {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com",
-      username: "@alexjohnson"
+      icon: Mail,
+      label: "Email",
+      href: "mailto:manojtarun934@gmail.com",
+      username: "manojtarun934@gmail.com"
     }
   ];
 

@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold"
           >
-            <span className="text-gradient-primary">Alex Johnson</span>
+            <span className="text-gradient-primary">Vegirowthu Manoj Tarun</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground/90"
           >
-            Full-Stack Developer & UI/UX Designer
+            Frontend Developer | Full-Stack Enthusiast | Problem Solver
           </motion.h2>
 
           {/* Description */}
@@ -67,9 +67,9 @@ const HeroSection: React.FC = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           >
-            I craft extraordinary digital experiences with modern technologies. 
-            Specializing in React, Next.js, and creating beautiful, functional applications 
-            that solve real-world problems.
+            Computer Science student passionate about creating innovative web solutions. 
+            Currently pursuing B.Tech at RGUKT Srikakulam with expertise in React, Node.js, 
+            and modern web technologies. Building the future, one line of code at a time.
           </motion.p>
 
           {/* CTA Buttons */}

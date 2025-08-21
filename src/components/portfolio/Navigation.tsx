@@ -12,6 +12,8 @@ const Navigation: React.FC = () => {
     { label: 'About', href: '#about', id: 'about' },
     { label: 'Projects', href: '#projects', id: 'projects' },
     { label: 'Skills', href: '#skills', id: 'skills' },
+    { label: 'Experience', href: '#experience', id: 'experience' },
+    { label: 'Certifications', href: '#certifications', id: 'certifications' },
     { label: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -54,7 +56,7 @@ const Navigation: React.FC = () => {
               onClick={() => scrollToSection('hero')}
             >
               <h1 className="text-xl lg:text-2xl font-bold text-gradient-primary">
-                AJ
+                VMT
               </h1>
             </motion.div>
 

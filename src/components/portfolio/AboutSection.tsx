@@ -6,9 +6,9 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 
 const AboutSection: React.FC = () => {
   const skills = [
-    { icon: Code, title: "Development", description: "React, Next.js, TypeScript, Node.js" },
-    { icon: Palette, title: "Design", description: "Figma, Adobe XD, UI/UX Design" },
-    { icon: Zap, title: "Performance", description: "Optimization, Testing, Deployment" },
+    { icon: Code, title: "Frontend", description: "React.js, HTML, CSS, JavaScript, Tailwind" },
+    { icon: Palette, title: "Backend", description: "Node.js, Express, MongoDB, SQLite" },
+    { icon: Zap, title: "Other Skills", description: "Python, C++, DSA, Git, GitHub" },
   ];
 
   return (
@@ -43,7 +43,7 @@ const AboutSection: React.FC = () => {
               <div className="relative bg-card-secondary rounded-2xl p-8 border-gradient">
                 <img
                   src={profilePhoto}
-                  alt="Alex Johnson"
+                  alt="Vegirowthu Manoj Tarun"
                   className="w-full max-w-md mx-auto rounded-xl shadow-card hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -60,16 +60,17 @@ const AboutSection: React.FC = () => {
           >
             <div className="space-y-6">
               <h3 className="text-2xl md:text-3xl font-semibold">
-                Crafting Digital Excellence
+                Passionate About Innovation
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With over 5 years of experience in full-stack development, I specialize in creating 
-                modern, scalable applications that deliver exceptional user experiences. My passion 
-                lies in transforming complex problems into elegant, intuitive solutions.
+                B.Tech Computer Science student at RGUKT Srikakulam with a stellar 9.2 CGPA, currently 
+                working as a Software Developer Engineer Intern at Tasklabs. I specialize in creating 
+                modern web applications using React, Node.js, and cutting-edge technologies.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community.
+                From building productivity platforms to e-commerce solutions, I love solving real-world 
+                problems through code. When I'm not developing, you'll find me exploring new frameworks, 
+                participating in tech competitions, or contributing to open-source projects.
               </p>
             </div>
 
