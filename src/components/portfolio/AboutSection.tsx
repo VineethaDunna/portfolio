@@ -114,13 +114,12 @@ const AboutSection: React.FC = () => {
 							viewport={{ once: true }}>
 							<a
 								href='/resume.pdf'
-								download
 								target='_blank'
 								rel='noopener noreferrer'
 								className='group inline-flex items-center'>
 								<Button variant='hero' size='lg'>
 									<Download className='mr-2 h-5 w-5 group-hover:animate-bounce' />
-									Download Resume
+									View Resume
 								</Button>
 							</a>
 						</motion.div>

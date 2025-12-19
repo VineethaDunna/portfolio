@@ -100,7 +100,6 @@ const HeroSection: React.FC = () => {
 						className='pt-4'>
 						<a
 							href='/resume.pdf'
-							download
 							target='_blank'
 							rel='noopener noreferrer'
 							className='group inline-flex items-center'>

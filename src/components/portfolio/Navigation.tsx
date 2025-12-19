@@ -75,7 +75,6 @@ const Navigation: React.FC = () => {
 						<div className='hidden md:block'>
 							<a
 								href='/resume.pdf'
-								download
 								target='_blank'
 								rel='noopener noreferrer'
 								className='group inline-flex items-center'>
@@ -130,7 +129,6 @@ const Navigation: React.FC = () => {
 							<div className='px-6 py-8 border-t border-white/10'>
 								<a
 									href='/resume.pdf'
-									download
 									target='_blank'
 									rel='noopener noreferrer'
 									className='group inline-flex items-center'>
