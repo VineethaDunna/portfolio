@@ -54,7 +54,7 @@ const Navigation: React.FC = () => {
 							className='cursor-pointer'
 							onClick={() => scrollToSection("hero")}>
 							<h1 className='text-xl lg:text-2xl font-bold text-gradient-primary'>
-								DV
+								VD
 							</h1>
 						</motion.div>
 

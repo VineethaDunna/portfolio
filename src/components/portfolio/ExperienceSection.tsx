@@ -138,7 +138,6 @@ import {
 	Calendar,
 	CheckCircle,
 	ExternalLink,
-	Github,
 	Linkedin,
 } from "lucide-react";
 
@@ -150,32 +149,53 @@ interface Experience {
 	duration: string;
 	type: string;
 	responsibilities: string[];
+	linkedin?: string;
+	website?: string;
 }
 
 const ExperienceSection: React.FC = () => {
 	const experiences: Experience[] = [
 		{
 			id: 1,
-			company: "Finelabs",
+			company: "Gridlex Services Pvt. Ltd.",
+			position: "Software Engineer",
+			location: "Hyderabad, India",
+			duration: "May 2026 – Present",
+			type: "Full-time",
+			responsibilities: [
+				"Contributing to product development by building and enhancing new features for production applications using React.js and JavaScript",
+				"Developing reusable UI components, implementing application flows, and improving existing product functionality and user experience",
+				"Working with PostgreSQL, APIs, and application data flows to support reliable and scalable end-to-end product features",
+				"Using GitHub Actions and Git-based development workflows to automate development processes and support efficient software delivery",
+				"Leveraging AI-assisted development tools for code analysis, debugging, feature development, and improving engineering productivity",
+			],
+			website: "https://gridlex.com/",
+			linkedin: "https://www.linkedin.com/company/gridlex/",
+		},
+		{
+			id: 2,
+			company: "Fine Labs",
 			position: "Full Stack Developer Intern",
 			location: "Remote",
 			duration: "Mar 2025 – Aug 2025",
 			type: "Internship",
 			responsibilities: [
-				"Worked as a full stack developer across both web and app platforms",
-				"Developed and maintained the official Finelabs website (https://finelabs.in), including building an AI-powered chatbot for customer interaction",
-				"Built and deployed Bytes-News, a content-driven project with optimized UI, scalable backend, and smooth user experience",
+				"Worked as a full stack developer across both web and mobile application platforms",
+				"Developed and maintained the official Fine Labs website, including building an AI-powered chatbot for customer interaction",
+				"Built and deployed Bytes News, a content-driven platform with an optimized UI, scalable backend, and smooth user experience",
 				"Applied strong research skills to integrate emerging technologies and improve product features",
-				"Leveraged advanced AI tools to design intelligent, automated solutions that enhanced overall functionality",
+				"Leveraged AI tools to design intelligent and automated solutions that enhanced overall product functionality",
 			],
+			website: "https://www.finelabs.in/",
+			linkedin:
+				"https://www.linkedin.com/company/finelabsmarketplace/posts/?feedView=all",
 		},
 	];
 
 	return (
 		<section id='experience' className='py-20 lg:py-32 bg-background-secondary'>
 			<div className='container mx-auto px-4 relative'>
-				{/* Social Links top-right */}
-
+				{/* Section Heading */}
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -186,71 +206,93 @@ const ExperienceSection: React.FC = () => {
 						Professional{" "}
 						<span className='text-gradient-primary'>Experience</span>
 					</h2>
+
 					<p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
-						Building expertise through hands-on industry experience
+						Building impactful products through hands-on industry experience
 					</p>
 				</motion.div>
 
+				{/* Experience Timeline */}
 				<div className='max-w-4xl mx-auto'>
 					{experiences.map((experience, index) => (
 						<motion.div
 							key={experience.id}
 							initial={{ opacity: 0, x: -50 }}
 							whileInView={{ opacity: 1, x: 0 }}
-							transition={{ duration: 0.8, delay: index * 0.1 }}
+							transition={{
+								duration: 0.8,
+								delay: index * 0.1,
+							}}
 							viewport={{ once: true }}
-							className='relative'>
+							className='relative pb-10 last:pb-0'>
 							{/* Timeline Line */}
-							<div className='absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-primary opacity-30' />
+							{index !== experiences.length - 1 && (
+								<div className='absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-primary opacity-30' />
+							)}
 
 							{/* Experience Card */}
-							<div className='glass rounded-2xl p-8 ml-20 hover-lift border-l-4 border-l-primary/50'>
+							<div className='glass rounded-2xl p-8 ml-20 hover-lift border-l-4 border-l-primary/50 relative'>
+								{/* Company Links */}
+								<div className='absolute right-4 top-4 flex items-center gap-4'>
+									{experience.linkedin && (
+										<a
+											href={experience.linkedin}
+											target='_blank'
+											rel='noopener noreferrer'
+											aria-label={`${experience.company} LinkedIn`}
+											className='p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition'>
+											<Linkedin className='h-5 w-5 text-primary' />
+										</a>
+									)}
+
+									{experience.website && (
+										<a
+											href={experience.website}
+											target='_blank'
+											rel='noopener noreferrer'
+											aria-label={`${experience.company} Website`}
+											className='p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition'>
+											<ExternalLink className='h-5 w-5 text-primary' />
+										</a>
+									)}
+								</div>
+
+								{/* Experience Header */}
 								<div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6'>
 									<div className='flex-1'>
 										<div className='flex items-center gap-3 mb-2'>
 											<div className='w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center'>
 												<Briefcase className='h-6 w-6 text-primary' />
 											</div>
+
 											<div>
 												<h3 className='text-xl font-semibold'>
 													{experience.position}
 												</h3>
+
 												<p className='text-primary font-medium'>
 													{experience.company}
 												</p>
 											</div>
 										</div>
 
+										{/* Experience Details */}
 										<div className='flex flex-wrap gap-4 text-sm text-muted-foreground mb-4'>
 											<div className='flex items-center gap-1'>
 												<Calendar className='h-4 w-4' />
 												{experience.duration}
 											</div>
+
 											<div className='flex items-center gap-1'>
 												<MapPin className='h-4 w-4' />
 												{experience.location}
 											</div>
+
 											<span className='px-2 py-1 bg-primary/10 text-primary rounded-full text-xs'>
 												{experience.type}
 											</span>
 										</div>
 									</div>
-								</div>
-								<div className='absolute right-4 top-4 flex items-center gap-4'>
-									<a
-										href='https://www.linkedin.com/company/finelabsmarketplace/posts/?feedView=all'
-										target='_blank'
-										rel='noopener noreferrer'
-										className='p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition'>
-										<Linkedin className='h-5 w-5 text-primary' />
-									</a>
-									<a
-										href='https://www.finelabs.in/'
-										target='_blank'
-										rel='noopener noreferrer'
-										className='p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition'>
-										<ExternalLink className='h-5 w-5 text-primary' />
-									</a>
 								</div>
 
 								{/* Responsibilities */}
@@ -258,16 +300,27 @@ const ExperienceSection: React.FC = () => {
 									<h4 className='font-semibold text-foreground/90 mb-3'>
 										Key Responsibilities:
 									</h4>
+
 									<div className='grid gap-3'>
 										{experience.responsibilities.map((responsibility, idx) => (
 											<motion.div
 												key={idx}
-												initial={{ opacity: 0, x: 20 }}
-												whileInView={{ opacity: 1, x: 0 }}
-												transition={{ duration: 0.5, delay: idx * 0.1 }}
+												initial={{
+													opacity: 0,
+													x: 20,
+												}}
+												whileInView={{
+													opacity: 1,
+													x: 0,
+												}}
+												transition={{
+													duration: 0.5,
+													delay: idx * 0.1,
+												}}
 												viewport={{ once: true }}
 												className='flex items-start gap-3'>
 												<CheckCircle className='h-5 w-5 text-primary mt-0.5 flex-shrink-0' />
+
 												<p className='text-muted-foreground leading-relaxed'>
 													{responsibility}
 												</p>

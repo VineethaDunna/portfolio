@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Download, Code, Palette, Zap } from "lucide-react";
+import { Download, Code, Database, Zap } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const AboutSection: React.FC = () => {
@@ -9,23 +9,25 @@ const AboutSection: React.FC = () => {
 		{
 			icon: Code,
 			title: "Frontend",
-			description: "React.js, HTML, CSS, JavaScript, Tailwind",
+			description: "React.js, Next.js, JavaScript, HTML, CSS, Tailwind CSS",
 		},
 		{
-			icon: Palette,
-			title: "Backend",
-			description: "Node.js, Express, MongoDB, SQLite",
+			icon: Database,
+			title: "Backend & Database",
+			description:
+				"Node.js, Express.js, PostgreSQL, MongoDB, Supabase, Firebase",
 		},
 		{
 			icon: Zap,
-			title: "Other Skills",
-			description: "React Native, AI Tools, Python, C++, DSA, Git, GitHub",
+			title: "Tools & Engineering",
+			description: "Git, GitHub, GitHub Actions, AI Tools, Python, C++, DSA",
 		},
 	];
 
 	return (
 		<section id='about' className='py-20 lg:py-32'>
 			<div className='container mx-auto px-4'>
+				{/* Section Heading */}
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -35,8 +37,10 @@ const AboutSection: React.FC = () => {
 					<h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-4'>
 						About <span className='text-gradient-primary'>Me</span>
 					</h2>
+
 					<p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
-						Passionate about creating digital experiences that make a difference
+						Passionate about building products, solving real-world problems, and
+						turning ideas into meaningful digital experiences
 					</p>
 				</motion.div>
 
@@ -49,12 +53,13 @@ const AboutSection: React.FC = () => {
 						viewport={{ once: true }}
 						className='relative'>
 						<div className='relative group'>
-							<div className='absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500'></div>
+							<div className='absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500' />
+
 							<div className='relative bg-card-secondary rounded-2xl p-8 border-gradient'>
 								<img
 									src={profilePhoto}
-									alt='Dunna Vineetha'
-									className='w-full max-w-md mx-auto  rounded-xl shadow-card hover:scale-15 transition-transform duration-500'
+									alt='Vineetha Dunna'
+									className='w-full max-w-md mx-auto rounded-xl shadow-card hover:scale-105 transition-transform duration-500'
 								/>
 							</div>
 						</div>
@@ -69,21 +74,24 @@ const AboutSection: React.FC = () => {
 						className='space-y-8'>
 						<div className='space-y-6'>
 							<h3 className='text-2xl md:text-3xl font-semibold'>
-								Passionate About Innovation
+								Building Products That Solve Real Problems
 							</h3>
+
 							<p className='text-lg text-muted-foreground leading-relaxed'>
-								B.Tech Computer Science student at RGUKT Srikakulam with a
-								stellar 9.2 CGPA, currently working as a Full Stack Developer
-								Intern at Finelabs. I specialize in building both web and mobile
-								applications using modern frameworks like React, Node.js, and
-								cutting-edge AI integrations.
+								I'm a Computer Science graduate from RGUKT Srikakulam with a 9.3
+								CGPA, currently working as a Software Engineer at Gridlex. My
+								work focuses on product development, building new features,
+								implementing application flows, and improving production
+								applications using React.js, JavaScript, PostgreSQL, and modern
+								development workflows.
 							</p>
+
 							<p className='text-lg text-muted-foreground leading-relaxed'>
-								From creating scalable news platforms and AI-powered chatbots to
-								designing responsive websites, I enjoy solving real-world
-								problems through end-to-end development. Beyond coding, I
-								actively explore new technologies, participate in hackathons,
-								and push boundaries in AI-driven innovation.
+								My experience spans full-stack web development, mobile
+								applications, APIs, databases, GitHub Actions, and AI-assisted
+								development. I enjoy understanding how products work end to end,
+								solving complex problems, and transforming ideas into scalable,
+								user-focused software.
 							</p>
 						</div>
 
@@ -94,11 +102,16 @@ const AboutSection: React.FC = () => {
 									key={skill.title}
 									initial={{ opacity: 0, y: 20 }}
 									whileInView={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.6, delay: index * 0.1 }}
+									transition={{
+										duration: 0.6,
+										delay: index * 0.1,
+									}}
 									viewport={{ once: true }}
 									className='glass rounded-xl p-6 hover-lift group'>
 									<skill.icon className='h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform duration-300' />
+
 									<h4 className='font-semibold mb-2'>{skill.title}</h4>
+
 									<p className='text-sm text-muted-foreground'>
 										{skill.description}
 									</p>
@@ -106,14 +119,17 @@ const AboutSection: React.FC = () => {
 							))}
 						</div>
 
-						{/* Download Resume Button */}
+						{/* Resume Button */}
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.6, delay: 0.4 }}
+							transition={{
+								duration: 0.6,
+								delay: 0.4,
+							}}
 							viewport={{ once: true }}>
 							<a
-								href='/resume.pdf'
+								href={`${import.meta.env.BASE_URL}resume.pdf`}
 								target='_blank'
 								rel='noopener noreferrer'
 								className='group inline-flex items-center'>

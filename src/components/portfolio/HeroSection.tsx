@@ -20,6 +20,7 @@ const HeroSection: React.FC = () => {
 				className='absolute inset-0 bg-cover bg-center bg-no-repeat'
 				style={{ backgroundImage: `url(${heroBackground})` }}
 			/>
+
 			<div className='absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90' />
 
 			{/* Hero Content */}
@@ -44,16 +45,17 @@ const HeroSection: React.FC = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.4, duration: 0.8 }}
 						className='text-4xl md:text-6xl lg:text-7xl font-bold'>
-						<span className='text-gradient-primary'>Dunna Vineetha</span>
+						<span className='text-gradient-primary'>Vineetha Dunna</span>
 					</motion.h1>
 
-					{/* Subtitle */}
+					{/* Professional Title */}
 					<motion.h2
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.6, duration: 0.8 }}
 						className='text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground/90'>
-						Frontend Developer | Full-Stack Enthusiast | Problem Solver | App
+						Software Engineer <span className='text-primary'>|</span> Product
+						Developer <span className='text-primary'>|</span> Full-Stack
 						Developer
 					</motion.h2>
 
@@ -63,10 +65,11 @@ const HeroSection: React.FC = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.8, duration: 0.8 }}
 						className='text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
-						Computer Science student passionate about creating innovative web
-						solutions. Currently pursuing B.Tech at RGUKT Srikakulam with
-						expertise in React, Node.js, and modern web technologies. Building
-						the future, one line of code at a time.
+						Software Engineer passionate about building scalable products and
+						meaningful user experiences. Experienced in developing new product
+						features using React.js, JavaScript, PostgreSQL, and modern
+						development workflows, with a strong foundation in full-stack and
+						mobile application development.
 					</motion.p>
 
 					{/* CTA Buttons */}
@@ -82,6 +85,7 @@ const HeroSection: React.FC = () => {
 							className='w-full sm:w-auto'>
 							View My Work
 						</Button>
+
 						<Button
 							variant='neon'
 							size='xl'
@@ -122,7 +126,11 @@ const HeroSection: React.FC = () => {
 				className='absolute bottom-8 left-1/2 transform -translate-x-1/2'>
 				<motion.div
 					animate={{ y: [0, 10, 0] }}
-					transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+					transition={{
+						duration: 2,
+						repeat: Infinity,
+						ease: "easeInOut",
+					}}
 					className='cursor-pointer'
 					onClick={() =>
 						document

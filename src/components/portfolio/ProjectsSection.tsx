@@ -266,7 +266,7 @@ const ProjectsSection: React.FC = () => {
 		},
 		{
 			id: 3,
-			title: "Revathi & Renu Wedding Invitation",
+			title: "Revath & Renu Wedding Invitation",
 			description:
 				"Elegant and interactive wedding invitation website with smooth animations and responsive design.",
 			image: weddingImg,
