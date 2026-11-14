@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, Code, Database, Zap } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/vineetha1.jpeg";
 
 const AboutSection: React.FC = () => {
 	const skills = [
